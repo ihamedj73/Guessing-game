@@ -1,8 +1,8 @@
 import { StyleSheet, Text } from "react-native";
 import colors from "../../constants/colors";
 
-function InStructionText({ children }) {
-  return <Text style={styles.instructionText}>{children}</Text>;
+function InStructionText({ children, style }) {
+  return <Text style={[styles.instructionText, style]}>{children}</Text>;
 }
 
 export default InStructionText;
