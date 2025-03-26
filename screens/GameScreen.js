@@ -5,6 +5,7 @@ import Card from "../components/UI/Card";
 import InStructionText from "../components/UI/InStructionText";
 import PrimaryButton from "../components/UI/PrimaryButton";
 import Title from "../components/UI/Title";
+import { Ionicons } from "@expo/vector-icons";
 
 function generateRandomBetween(min, max, exclude) {
   const rndNum = Math.floor(Math.random() * (max - min)) + min;
@@ -66,12 +67,12 @@ function GameScreen({ userNumber, onGameOver }) {
         <View style={styles.buttonsContainer}>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={() => nextGuestHandler("lower")}>
-              -
+              <Ionicons name="remove" size={24} color="#fff" />
             </PrimaryButton>
           </View>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={() => nextGuestHandler("higher")}>
-              +
+              <Ionicons name="add" size={24} color="#fff" />
             </PrimaryButton>
           </View>
         </View>
