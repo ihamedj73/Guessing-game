@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { Dimensions, StyleSheet, View } from "react-native";
 import colors from "../../constants/colors";
 
 function Card({ children }) {
@@ -7,13 +7,15 @@ function Card({ children }) {
 
 export default Card;
 
+const deviceWidth = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
   card: {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
     marginHorizontal: 24,
-    marginTop: 36,
+    marginTop: deviceWidth < 380 ? 18 : 36,
     backgroundColor: colors.primary800,
     borderRadius: 8,
     elevation: 4 /* This make shadow fot android */,
